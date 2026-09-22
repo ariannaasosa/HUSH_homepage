@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HUSH — marketplace de moda donde puedes comprar y vender ropa.">
+  <title>HUSH — Tu estilo, en un solo lugar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    <span>✨ Compra, vende y descubre nuevas marcas</span>
+    <button id="closeAnnouncement" aria-label="Cerrar aviso">×</button>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="logo" href="#inicio" aria-label="HUSH inicio">HUSH</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#vender">Vender</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#categorias">Categorías</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Buscar">⌕</button>
+        <button class="icon-btn" id="favoritesBtn" aria-label="Favoritos">♡</button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Carrito">
+          ♡
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="profile-btn" aria-label="Perfil">♙</button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-inner">
+        <input id="searchInput" type="search" placeholder="Busca ropa, marcas, usuarios..." autocomplete="off">
+        <span>⌕</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg-shape shape-one"></div>
+      <div class="hero-bg-shape shape-two"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">ROPA · ACCESORIOS · ZAPATOS</p>
+          <h1>Tu estilo,<br><em>en un solo lugar.</em></h1>
+          <p class="hero-text">
+            Compra y vende ropa de segunda mano y descubre tus próximas tiendas favoritas.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#tienda">Explorar ahora <span>→</span></a>
+            <a class="text-link" href="#vender">Quiero vender mi ropa</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="sparkle sparkle-a">✦</div>
+          <div class="sparkle sparkle-b">✧</div>
+          <div class="bag-shadow"></div>
+          <div class="hero-bag">
+            <div class="handle"></div>
+            <div class="bag-body">
+              <div class="bag-pocket"></div>
+              <div class="bag-line left"></div>
+              <div class="bag-line right"></div>
+              <div class="bag-logo">H</div>
+            </div>
+          </div>
+          <div class="hero-tag">NEW<br><strong>DROP</strong></div>
+        </div>
+      </div>
+
+      <div class="container trust-row">
+        <div class="trust-item"><span>♡</span><div><strong>Moda circular</strong><small>Ropa de personas reales</small></div></div>
+        <div class="trust-item"><span>✦</span><div><strong>Tiendas reconocidas</strong><small>Oficiales y verificadas</small></div></div>
+        <div class="trust-item"><span>◈</span><div><strong>Compra segura</strong><small>Simple y fácil</small></div></div>
+        <div class="trust-item"><span>♡</span><div><strong>Hecho para todos</strong><small>Todos los estilos</small></div></div>
+      </div>
+    </section>
+
+    <!-- POPULAR -->
+    <section class="section products-section" id="tienda">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">DESCUBRE TU PRÓXIMO LOOK</p>
+            <h2>Lo más <em>popular</em></h2>
+          </div>
+          <a href="#tienda" class="view-all">Ver todo →</a>
+        </div>
+
+        <div class="category-pills" id="categories">
+          <button class="pill active" data-filter="todos">Todos</button>
+          <button class="pill" data-filter="mujer">Mujer</button>
+          <button class="pill" data-filter="hombre">Hombre</button>
+          <button class="pill" data-filter="accesorios">Accesorios</button>
+          <button class="pill" data-filter="calzado">Calzado</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <article class="product-card reveal" data-category="mujer">
+            <div class="product-image image-1">
+              <span class="eco">✦ ECO</span>
+              <button class="heart" aria-label="Agregar a favoritos">♡</button>
+              <div class="clothing shirt"></div>
+            </div>
+            <div class="product-info">
+              <div><h3>Suéter rosa</h3><span>$18.00</span></div>
+              <small>@lily.shop</small>
+              <button class="add-cart" data-name="Suéter rosa">Agregar al carrito</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="mujer">
+            <div class="product-image image-2">
+              <span class="eco">✦ ECO</span>
+              <button class="heart" aria-label="Agregar a favoritos">♡</button>
+              <div class="clothing top"></div>
+            </div>
+            <div class="product-info">
+              <div><h3>Top corset</h3><span>$15.00</span></div>
+              <small>@valea22</small>
+              <button class="add-cart" data-name="Top corset">Agregar al carrito</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="hombre">
+            <div class="product-image image-3">
+              <span class="eco">✦ ECO</span>
+              <button class="heart" aria-label="Agregar a favoritos">♡</button>
+              <div class="clothing jeans"></div>
+            </div>
+            <div class="product-info">
+              <div><h3>Jeans wide leg</h3><span>$22.00</span></div>
+              <small>@paula.style</small>
+              <button class="add-cart" data-name="Jeans wide leg">Agregar al carrito</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="accesorios">
+            <div class="product-image image-4">
+              <span class="eco">✦ ECO</span>
+              <button class="heart" aria-label="Agregar a favoritos">♡</button>
+              <div class="clothing mini-bag"></div>
+            </div>
+            <div class="product-info">
+              <div><h3>Bolso Y2K</h3><span>$35.00</span></div>
+              <small>@sofi.closet</small>
+              <button class="add-cart" data-name="Bolso Y2K">Agregar al carrito</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="calzado">
+            <div class="product-image image-5">
+              <span class="eco">✦ ECO</span>
+              <button class="heart" aria-label="Agregar a favoritos">♡</button>
+              <div class="shoe">👟</div>
+            </div>
+            <div class="product-info">
+              <div><h3>Air Force 1</h3><span>$60.00</span></div>
+              <small>@karen.store</small>
+              <button class="add-cart" data-name="Air Force 1">Agregar al carrito</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="mujer">
+            <div class="product-image image-6">
+              <span class="eco">✦ ECO</span>
+              <button class="heart" aria-label="Agregar a favoritos">♡</button>
+              <div class="dress">♢</div>
+            </div>
+            <div class="product-info">
+              <div><h3>Vestido midi</h3><span>$26.00</span></div>
+              <small>@marla.closet</small>
+              <button class="add-cart" data-name="Vestido midi">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELL -->
+    <section class="sell-section" id="vender">
+      <div class="container sell-grid">
+        <div class="sell-copy reveal">
+          <p class="eyebrow">DALE UNA SEGUNDA VIDA</p>
+          <h2>Tu ropa también<br><em>puede contar historias.</em></h2>
+          <p>Publica las prendas que ya no usas, conecta con nuevas personas y convierte tu clóset en nuevas oportunidades.</p>
+          <a href="#" class="btn btn-primary" id="sellBtn">Vender mi ropa <span>→</span></a>
+        </div>
+        <div class="sell-card reveal">
+          <div class="sell-circle">♡</div>
+          <span>VENDE</span>
+          <strong>LO QUE YA<br>NO USAS</strong>
+          <small>Simple · rápido · seguro</small>
+          <div class="floating-label">+ NUEVA PUBLICACIÓN</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands-section" id="marcas">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">DESCUBRE MARCAS</p>
+            <h2>Tiendas <em>oficiales.</em></h2>
+          </div>
+          <a href="#" class="view-all">Ver todas →</a>
+        </div>
+
+        <div class="brand-list reveal">
+          <button class="brand">ZARA</button>
+          <button class="brand">H&M</button>
+          <button class="brand">NIKE</button>
+          <button class="brand">adidas</button>
+          <button class="brand">PULL&BEAR</button>
+          <button class="brand">Bershka</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section class="feature-section">
+      <div class="container feature-grid">
+        <div class="feature-art reveal">
+          <div class="art-card art-main">
+            <div class="fashion-face"></div>
+            <div class="art-word">HUSH</div>
+          </div>
+          <div class="art-card art-small one">✦</div>
+          <div class="art-card art-small two">♡</div>
+        </div>
+        <div class="feature-copy reveal">
+          <p class="eyebrow">MÁS QUE UNA TIENDA</p>
+          <h2>Moda con una vibra<br><em>diferente.</em></h2>
+          <p>En HUSH puedes descubrir prendas únicas de otras personas y, al mismo tiempo, encontrar tus marcas favoritas. Todo en un espacio visual, simple y pensado para disfrutar la moda.</p>
+          <a href="#" class="btn btn-outline">Conoce HUSH <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="container newsletter-inner reveal">
+        <p class="eyebrow">HUSH CLUB</p>
+        <h2>Lo nuevo llega <em>primero aquí.</em></h2>
+        <p>Recibe novedades, nuevos drops y recomendaciones.</p>
+        <form id="newsletterForm">
+          <input id="emailInput" type="email" placeholder="Tu correo electrónico" required>
+          <button class="btn btn-primary" type="submit">Unirme <span>→</span></button>
+        </form>
+        <small id="formMessage"></small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="#inicio">HUSH</a>
+        <p>Tu estilo, en un solo lugar.</p>
+      </div>
+      <div><strong>Explora</strong><a href="#tienda">Tienda</a><a href="#marcas">Marcas</a><a href="#categorias">Categorías</a></div>
+      <div><strong>Vende</strong><a href="#vender">Publicar ropa</a><a href="#">Cómo funciona</a><a href="#">Consejos</a></div>
+      <div><strong>Ayuda</strong><a href="#">Preguntas frecuentes</a><a href="#">Contacto</a><a href="#">Privacidad</a></div>
+    </div>
+    <div class="container footer-bottom">© 2026 HUSH · Hecho con ♡</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
